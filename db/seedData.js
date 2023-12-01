@@ -18,7 +18,7 @@ async function createTables() {
     try {
         console.log('Building All Tables...');
         await client.query(`
-      CREATE TABLE videoGames (
+      CREATE TABLE videogames (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) UNIQUE NOT NULL,
         description TEXT NOT NULL,
@@ -27,7 +27,7 @@ async function createTables() {
         "isPopular" BOOLEAN DEFAULT false,
         "imgUrl" VARCHAR(255) DEFAULT 'https://i.imgur.com/3J3wW9S.png'
         );
-        CREATE TABLE boardGames (
+        CREATE TABLE boardgames (
             id SERIAL PRIMARY KEY,
             name VARCHAR(255) UNIQUE NOT NULL,
             description TEXT NOT NULL,
